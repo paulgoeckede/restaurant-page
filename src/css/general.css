@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: url("../assets/background-pizza.jpg") no-repeat center center
+        fixed;
+    background-size: cover;
+}
+
+#contentDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}

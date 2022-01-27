@@ -1,0 +1,35 @@
+@import url(./poppins-loader.css);
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins";
+    color: #faf9f6;
+    padding: 0px 30px;
+}
+
+#navList {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    text-decoration: none;
+    color: #efffc8;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+#menuLink,
+#contactLink {
+    text-decoration: none;
+    color: #efffc8;
+    letter-spacing: 5px;
+}
+
+#menuLink:hover,
+#contactLink:hover {
+    font-weight: bold;
+}

@@ -1,1 +1,3 @@
-console.log("Hello World");
+import landingDom from "./js/dom-loader-landing";
+
+landingDom();
