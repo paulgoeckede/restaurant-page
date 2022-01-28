@@ -1,0 +1,64 @@
+@import url(./poppins-loader.css);
+
+/* ------------GENERAL START ------------- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: url("../assets/background-pizza.jpg") no-repeat center center
+        fixed;
+    background-size: cover;
+}
+
+#contentDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* ------------GENERAL END ------------- */
+/* ------------MAIN START ------------- */
+
+#main {
+    color: #faf9f6;
+    font-family: "Poppins";
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#menuDiv {
+    background-color: #141414;
+    width: 40%;
+    height: 80%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2);
+}
+
+#menuHeader {
+    text-align: center;
+    border-bottom: 1px solid white;
+    font-weight: 100;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    letter-spacing: 5px;
+}
+
+/* ------------HEADER END ------------- */
+/* ------------FOOTER START ------------- */
+
+footer {
+    text-align: right;
+    color: #faf9f6;
+    opacity: 0.3;
+    font-size: 12px;
+    padding: 0px 20px;
+}
+
+/* ------------FOOTER END ------------- */

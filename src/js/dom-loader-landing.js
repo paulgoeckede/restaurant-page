@@ -1,7 +1,17 @@
 import "../css/landing-page.css";
+import "../css/header.css";
 import Reviews from "./data/reviews.js";
+import menuDom from "./dom-loader-menu.js";
+
+function generateContentDiv() {
+    const contentDiv = document.createElement("div");
+    contentDiv.setAttribute("id", "contentDiv");
+    document.body.appendChild(contentDiv);
+}
 
 export default function domLoader() {
+    const contentDiv = document.getElementById("contentDiv");
+
     /* -------------- HEADER START -------------------- */
 
     //Header, Navbar generation
@@ -16,30 +26,22 @@ export default function domLoader() {
     const navList = document.createElement("ul");
     const menuListItem = document.createElement("li");
     const contactListItem = document.createElement("li");
-    const menuLink = document.createElement("a");
-    const contactLink = document.createElement("a");
-    menuLink.setAttribute("href", "");
-    contactLink.setAttribute("href", "");
-    menuLink.innerHTML = "MENU";
-    contactLink.innerHTML = "CONTACT";
     navList.setAttribute("id", "navList");
-    menuListItem.setAttribute("id", "menuListItem");
-    contactListItem.setAttribute("id", "contactListItem");
-    menuLink.setAttribute("id", "menuLink");
-    contactLink.setAttribute("id", "contactLink");
-    menuListItem.appendChild(menuLink);
-    contactListItem.appendChild(contactLink);
-    navList.appendChild(menuLink);
-    navList.appendChild(contactLink);
+    menuListItem.setAttribute("id", "menuLink");
+    menuListItem.innerHTML = "MENU";
+    contactListItem.setAttribute("id", "contactLink");
+    contactListItem.innerHTML = "CONTACT";
+    navList.appendChild(menuListItem);
+    navList.appendChild(contactListItem);
     header.appendChild(navList);
 
-    //content div generation
-    const contentDiv = document.createElement("div");
-    contentDiv.setAttribute("id", "contentDiv");
-    contentDiv.appendChild(header);
+    //Link functionality
+    menuListItem.addEventListener("click", () => {
+        contentDiv.innerHTML = "";
+        menuDom();
+    });
 
-    //add header to document
-    document.body.appendChild(contentDiv);
+    contentDiv.appendChild(header);
 
     /* -------------- HEADER END -------------------- */
     /* -------------- MAIN START -------------------- */
@@ -99,3 +101,5 @@ export default function domLoader() {
 
     /* -------------- FOOTER END ---------------------- */
 }
+
+export { generateContentDiv };
