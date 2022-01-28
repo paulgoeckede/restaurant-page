@@ -1,0 +1,140 @@
+@import url(./poppins-loader.css);
+
+/* ------------GENERAL START ------------- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: url("../assets/background-pizza.jpg") no-repeat center center
+        fixed;
+    background-size: cover;
+}
+
+#contentDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* ------------GENERAL END ------------- */
+/* ------------HEADER START ------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins";
+    color: #faf9f6;
+    padding: 0px 30px;
+}
+
+#navList {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    text-decoration: none;
+    color: #efffc8;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+#menuLink,
+#contactLink {
+    text-decoration: none;
+    color: #efffc8;
+    letter-spacing: 5px;
+}
+
+#menuLink:hover,
+#contactLink:hover {
+    font-weight: bold;
+}
+
+/* ------------HEADER END ------------- */
+/* ------------MAIN START ------------- */
+
+#main {
+    color: #faf9f6;
+    font-family: "Poppins";
+    display: flex;
+    height: 100%;
+}
+
+#reviewDiv,
+#taglineDiv {
+    width: 50%;
+    height: 80%;
+}
+
+#reviewDiv {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0.7;
+}
+
+#reviewDiv h5 {
+    font-style: italic;
+    text-align: right;
+    opacity: 0.5;
+}
+
+#taglineDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+#taglineDiv h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 84px;
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#orderButton {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: transparent;
+    border: 2px solid #50514f;
+    color: #faf9f6;
+    font-family: "Poppins";
+    padding: 10px 20px;
+    transition: border 0.2s;
+}
+
+#orderButton:hover {
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #faf9f6;
+}
+
+/* ------------HEADER END ------------- */
+/* ------------FOOTER START ------------- */
+
+footer {
+    text-align: right;
+    color: #faf9f6;
+    opacity: 0.3;
+    font-size: 12px;
+    padding: 0px 20px;
+}
+
+/* ------------FOOTER END ------------- */

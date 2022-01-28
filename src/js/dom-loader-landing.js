@@ -1,7 +1,5 @@
-import "../css/general.css";
-import "../css/header.css";
-import "../css/main.css";
-import "../css/footer.css";
+import "../css/landing-page.css";
+import Reviews from "./data/reviews.js";
 
 export default function domLoader() {
     /* -------------- HEADER START -------------------- */
@@ -49,10 +47,8 @@ export default function domLoader() {
     //Main text
 
     const main = document.createElement("main");
-    const emptyDiv = document.createElement("div");
     const taglineDiv = document.createElement("div");
     main.setAttribute("id", "main");
-    emptyDiv.setAttribute("id", "emptyDiv");
     taglineDiv.setAttribute("id", "taglineDiv");
     const heading = document.createElement("h1");
     heading.innerHTML =
@@ -70,8 +66,25 @@ export default function domLoader() {
     buttonDiv.appendChild(orderButton);
     taglineDiv.appendChild(buttonDiv);
 
+    //Reviews
+    const reviewDiv = document.createElement("div");
+    reviewDiv.setAttribute("id", "reviewDiv");
+    const currentReviews = Reviews();
+
+    currentReviews.forEach(function (review) {
+        const reviewAuthor = document.createElement("h5");
+        const reviewText = document.createElement("h4");
+        reviewAuthor.innerHTML = review.getAuthor;
+        reviewText.innerHTML = review.getReview;
+        const reviewContainer = document.createElement("div");
+        reviewContainer.setAttribute("id", `reviewDiv${review.index}`);
+        reviewContainer.appendChild(reviewText);
+        reviewContainer.appendChild(reviewAuthor);
+        reviewDiv.appendChild(reviewContainer);
+    });
+
     //add to document
-    main.appendChild(emptyDiv);
+    main.appendChild(reviewDiv);
     main.appendChild(taglineDiv);
     contentDiv.appendChild(main);
 
