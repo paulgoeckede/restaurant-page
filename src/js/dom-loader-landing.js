@@ -1,16 +1,18 @@
 import "../css/landing-page.css";
 import "../css/header.css";
+import "../css/general.css";
 import Reviews from "./data/reviews.js";
 import menuDom from "./dom-loader-menu.js";
 
 function generateContentDiv() {
     const contentDiv = document.createElement("div");
-    contentDiv.setAttribute("id", "contentDiv");
+    contentDiv.setAttribute("id", "contentDivLanding");
     document.body.appendChild(contentDiv);
 }
 
 export default function domLoader() {
-    const contentDiv = document.getElementById("contentDiv");
+    const contentDiv = document.getElementById("contentDivLanding");
+    contentDiv.setAttribute("id", "contentDivLanding");
 
     /* -------------- HEADER START -------------------- */
 

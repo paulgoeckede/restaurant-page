@@ -1,8 +1,10 @@
 import "../css/menu.css";
+import "../css/general.css";
 import landingDom from "./dom-loader-landing";
 
 export default function domLoader() {
-    const contentDiv = document.getElementById("contentDiv");
+    const contentDiv = document.getElementById("contentDivLanding");
+    contentDiv.setAttribute("id", "contentDivMenu");
 
     /* -------------- HEADER START -------------------- */
 
