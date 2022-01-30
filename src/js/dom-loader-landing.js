@@ -3,6 +3,7 @@ import "../css/header.css";
 import "../css/general.css";
 import Reviews from "./data/reviews.js";
 import menuDom from "./dom-loader-menu.js";
+import { renameContentDiv } from "./dom-loader-menu.js";
 
 function generateContentDiv() {
     const contentDiv = document.createElement("div");
@@ -12,7 +13,6 @@ function generateContentDiv() {
 
 export default function domLoader() {
     const contentDiv = document.getElementById("contentDivLanding");
-    contentDiv.setAttribute("id", "contentDivLanding");
 
     /* -------------- HEADER START -------------------- */
 
@@ -40,6 +40,7 @@ export default function domLoader() {
     //Link functionality
     menuListItem.addEventListener("click", () => {
         contentDiv.innerHTML = "";
+        renameContentDiv();
         menuDom();
     });
 

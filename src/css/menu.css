@@ -2,41 +2,60 @@
 
 /* ------------MAIN START ------------- */
 
-#main {
+#mainMenu {
     color: #faf9f6;
     font-family: "Poppins";
     display: flex;
     height: 100%;
+    width: 60%;
     justify-content: center;
     align-items: center;
+    padding: 30px;
+    padding-top: 10px;
+    gap: 10px;
 }
 
-#menuDiv {
-    background-color: #141414;
-    width: 40%;
+#pizzaDiv,
+#pastaDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 80%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2);
 }
 
-#menuHeader {
-    text-align: center;
+.itemDiv {
     border-bottom: 1px solid white;
-    font-weight: 100;
-    padding-bottom: 10px;
-    padding-top: 15px;
-    letter-spacing: 5px;
+}
+
+#pizzaDiv p,
+#pastaDiv p {
+    font-style: italic;
+}
+
+#price {
+    font-style: normal;
+    text-align: right;
 }
 
 /* ------------HEADER END ------------- */
 /* ------------FOOTER START ------------- */
 
 footer {
-    text-align: right;
     color: #faf9f6;
-    opacity: 0.3;
     font-size: 12px;
     padding: 0px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+footer p {
+    opacity: 0.3;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
 }
 
 /* ------------FOOTER END ------------- */
