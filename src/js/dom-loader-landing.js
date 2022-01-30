@@ -3,7 +3,7 @@ import "../css/header.css";
 import "../css/general.css";
 import Reviews from "./data/reviews.js";
 import menuDom from "./dom-loader-menu.js";
-import { renameContentDiv } from "./dom-loader-menu.js";
+import contactDom from "./dom-loader-contact.js";
 
 function generateContentDiv() {
     const contentDiv = document.createElement("div");
@@ -40,8 +40,14 @@ export default function domLoader() {
     //Link functionality
     menuListItem.addEventListener("click", () => {
         contentDiv.innerHTML = "";
-        renameContentDiv();
+        renameDiv("contentDivMenu");
         menuDom();
+    });
+
+    contactListItem.addEventListener("click", () => {
+        contentDiv.innerHTML = "";
+        renameDiv("contentDivContact");
+        contactDom();
     });
 
     contentDiv.appendChild(header);
@@ -103,6 +109,11 @@ export default function domLoader() {
     contentDiv.appendChild(footer);
 
     /* -------------- FOOTER END ---------------------- */
+}
+
+function renameDiv(name) {
+    const contentDiv = document.getElementById("contentDivLanding");
+    contentDiv.setAttribute("id", name);
 }
 
 export { generateContentDiv };

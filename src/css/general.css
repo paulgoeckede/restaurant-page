@@ -26,4 +26,9 @@
     background-image: url("../assets/vegetable-bg.jpg");
 }
 
+.highlight {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* ------------GENERAL END ------------- */

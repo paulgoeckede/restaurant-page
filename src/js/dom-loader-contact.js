@@ -1,11 +1,10 @@
+import "../css/header.css";
 import "../css/menu.css";
 import "../css/general.css";
-import contactDom from "./dom-loader-contact.js";
-import currentMenu from "./data/menu.js";
+import menuDom from "./dom-loader-menu.js";
 
 export default function domLoader() {
-    const contentDiv = document.getElementById("contentDivMenu");
-
+    const contentDiv = document.getElementById("contentDivContact");
     /* -------------- HEADER START -------------------- */
 
     //Header, Navbar generation
@@ -42,48 +41,7 @@ export default function domLoader() {
         contactDom();
     });
 
-    contentDiv.appendChild(header);
-
-    /* -------------- HEADER END -------------------- */
-    /* -------------- MAIN START -------------------- */
-
-    const main = document.createElement("main");
-    main.setAttribute("id", "mainMenu");
-
-    const menuDiv = document.createElement("div");
-    menuDiv.setAttribute("id", "menuDiv");
-
-    const pizzaDiv = document.createElement("div");
-    pizzaDiv.setAttribute("id", "pizzaDiv");
-
-    const pastaDiv = document.createElement("div");
-    pastaDiv.setAttribute("id", "pastaDiv");
-    //type, name, ingredients, price
-    const menuArray = Array.from(currentMenu());
-    menuArray.forEach((Item) => {
-        const itemDiv = document.createElement("div");
-        itemDiv.classList.add("itemDiv");
-        const itemName = document.createElement("h4");
-        itemName.innerHTML = Item.name;
-        const itemIngredients = document.createElement("p");
-        itemIngredients.innerHTML = Item.ingredients;
-        const itemPrice = document.createElement("p");
-        itemPrice.setAttribute("id", "price");
-        itemPrice.innerHTML = Item.price;
-        itemDiv.appendChild(itemName);
-        itemDiv.appendChild(itemIngredients);
-        itemDiv.appendChild(itemPrice);
-        if (Item.type === "Pizza") {
-            pizzaDiv.appendChild(itemDiv);
-        } else if (Item.type === "Pasta") {
-            pastaDiv.appendChild(itemDiv);
-        }
-        console.log(Item);
-    });
-
-    main.appendChild(pizzaDiv);
-    main.appendChild(pastaDiv);
-    contentDiv.appendChild(main);
+    console.log(contentDiv.getAttribute("id"));
 
     if (contentDiv.getAttribute("id") === "contentDivMenu") {
         menuListItem.classList.add("highlight");
@@ -95,6 +53,16 @@ export default function domLoader() {
         contactListItem.classList.remove("highlight");
         menuListItem.classList.remove("highlight");
     }
+
+    contentDiv.appendChild(header);
+
+    /* -------------- HEADER END -------------------- */
+    /* -------------- MAIN START -------------------- */
+
+    const main = document.createElement("main");
+    main.setAttribute("id", "mainMenu");
+
+    contentDiv.appendChild(main);
 
     /* -------------- MAIN END -------------------- */
     /* -------------- FOOTER START ---------------------- */
