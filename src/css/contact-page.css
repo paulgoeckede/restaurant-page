@@ -1,0 +1,72 @@
+@import url(./poppins-loader.css);
+
+/* ------------MAIN START ------------- */
+
+#mainContact {
+    color: #faf9f6;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    justify-content: center;
+    padding: 30px;
+    padding-top: 10px;
+}
+
+#contactHeader {
+    text-decoration: underline;
+}
+
+/* FORM */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type="submit"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: transparent;
+    border: 2px solid #50514f;
+    color: #faf9f6;
+    font-family: "Poppins";
+    padding: 10px 20px;
+    transition: border 0.2s;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #faf9f6;
+}
+
+/* ------------HEADER END ------------- */
+/* ------------FOOTER START ------------- */
+
+footer {
+    color: #faf9f6;
+    font-size: 12px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ------------FOOTER END ------------- */

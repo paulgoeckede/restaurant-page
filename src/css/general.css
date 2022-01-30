@@ -16,7 +16,8 @@
     background-image: url("../assets/background-pizza.jpg");
 }
 
-#contentDivMenu {
+#contentDivMenu,
+#contentDivContact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +29,7 @@
 
 .highlight {
     font-weight: bold;
-    text-decoration: underline;
+    border-bottom: 2px solid white;
 }
 
 /* ------------GENERAL END ------------- */

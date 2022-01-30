@@ -12,6 +12,11 @@ const review2 = new Review(
     "I would give more than 3 stars if we could. Maybe we need to update our review guidelines, because Gepetto's just broke the standards."
 );
 
+const review3 = new Review(
+    "Paul's Food Guide",
+    "This is the most incredible pizza I've ever had. I went here everyday since I visited the first time and gained 30 pounds. Pasta is also good."
+);
+
 function addIndex() {
     for (let i = 0; i < reviews.length; i++) {
         reviews[i].index = i;
@@ -20,6 +25,7 @@ function addIndex() {
 
 reviews.push(review1);
 reviews.push(review2);
+reviews.push(review3);
 
 export default function getReviews() {
     return reviews;

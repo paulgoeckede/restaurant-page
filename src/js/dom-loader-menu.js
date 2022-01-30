@@ -42,6 +42,19 @@ export default function domLoader() {
         contactDom();
     });
 
+    //highlights the current tab in the header
+
+    if (contentDiv.getAttribute("id") === "contentDivMenu") {
+        menuListItem.classList.add("highlight");
+        contactListItem.classList.remove("highlight");
+    } else if (contentDiv.getAttribute("id") === "contentDivContact") {
+        contactListItem.classList.add("highlight");
+        menuListItem.classList.remove("highlight");
+    } else if (contentDiv.getAttribute("id") === "contentDivLanding") {
+        contactListItem.classList.remove("highlight");
+        menuListItem.classList.remove("highlight");
+    }
+
     contentDiv.appendChild(header);
 
     /* -------------- HEADER END -------------------- */
@@ -58,7 +71,7 @@ export default function domLoader() {
 
     const pastaDiv = document.createElement("div");
     pastaDiv.setAttribute("id", "pastaDiv");
-    //type, name, ingredients, price
+    //loops through each current menu item and displays it to the page
     const menuArray = Array.from(currentMenu());
     menuArray.forEach((Item) => {
         const itemDiv = document.createElement("div");
@@ -84,17 +97,6 @@ export default function domLoader() {
     main.appendChild(pizzaDiv);
     main.appendChild(pastaDiv);
     contentDiv.appendChild(main);
-
-    if (contentDiv.getAttribute("id") === "contentDivMenu") {
-        menuListItem.classList.add("highlight");
-        contactListItem.classList.remove("highlight");
-    } else if (contentDiv.getAttribute("id") === "contentDivContact") {
-        contactListItem.classList.add("highlight");
-        menuListItem.classList.remove("highlight");
-    } else if (contentDiv.getAttribute("id") === "contentDivLanding") {
-        contactListItem.classList.remove("highlight");
-        menuListItem.classList.remove("highlight");
-    }
 
     /* -------------- MAIN END -------------------- */
     /* -------------- FOOTER START ---------------------- */
